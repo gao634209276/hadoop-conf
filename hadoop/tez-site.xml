@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+        <property>
+                <name>tez.lib.uris</name>
+                <value>${fs.defaultFS}/user/sinova/apps/tez-0.5.4,${fs.defaultFS}/user/sinova/apps/tez-0.5.4/lib</value>
+        </property>
+</configuration>
