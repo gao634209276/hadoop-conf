@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+	<!--hive HDFS Dir-->
+	<property>
+		<name>hive.metastore.warehouse.dir</name>
+		<value>/user/hive/warehouse</value>
+	</property>
+	
+	<!--hive Client-->
+	<!--<property>
+		<name>hive.metastore.uris</name>
+		<value>thrift://ark:9083</value>
+		<description>Thrift URI for the remote metastore. Used by metastore client to connect to remote metastore.</description>
+	</property> -->
+	
+	<!--hive-engine with tez-->
+	<!--<property>
+		<name>hive.execution.engine</name>
+		<value>tez</value>
+	</property>-->
+	<!--hive-metastore Mysql-->
+	<property>
+		<name>javax.jdo.option.ConnectionURL</name>
+		<value>jdbc:mysql://localhost:3306/hive?createDatabaseIfNotExist=true</value>
+	</property>
+	<property>
+		<name>javax.jdo.option.ConnectionDriverName</name>
+		<value>com.mysql.jdbc.Driver</value>
+	</property>
+	<property>
+		<name>javax.jdo.option.ConnectionUserName</name>
+		<value>hive</value>
+	</property>
+	<property>
+		<name>javax.jdo.option.ConnectionPassword</name>
+		<value>hive</value>
+	</property>
+	<!--hive server thrift-->
+	<!--<property>
+		<name>hive.server2.thrift.bind.host</name>
+		<value>ark</value>
+	</property>
+	<property>
+		<name>hive.server2.transport.mode</name>
+		<value>http</value>
+	</property>
+	<property>
+		<name>hive.server2.thrift.http.port</name>
+		<value>10001</value>
+	</property>
+	<property>
+		<name>hive.server2.thrift.http.path</name>
+		<value>cliservice</value>
+	</property>-->
+	<!-- 设置为false，查询将以运行hiveserver2进程的用户运行--> 
+	<property>
+		<name>hive.server2.enable.doAs</name>
+		<value>ture</value>
+	</property>
+	<property>
+		<name>hive.server2.thrift.bind.host</name>
+		<value>ark</value>
+	</property>
+	<property>
+		<name>hive.server2.thrift.port</name>
+		<value>10000</value>
+	</property>
+	<!--hive.exec-->
+	<property>
+		<name>hive.exec.parallel</name>
+		<value>true</value>
+	</property>
+	<property>
+		<name>hive.exec.dynamic.partition.mode</name>
+		<value>strict</value>
+	</property>
+	<property>
+		<name>hive.exec.compress.intermediate</name>
+		<value>true</value>
+	</property>
+	<!--hive-hwi-->
+	<property>
+		<name>hive.hwi.listen.host</name>
+		<value>0.0.0.0</value>
+	</property>
+	<property>
+		<name>hive.hwi.listen.port</name>
+		<value>9999</value>
+	</property>
+	<property>
+		<name>hive.hwi.war.file</name>
+		<value>lib/hive-hwi-1.2.1.war</value>
+	</property>
+
+	<property>
+		<name>hive.querylog.location</name> 
+		<value>/app/noah/hive-1.2.1/logs</value>
+	</property> 
+	<!--hive-hbase-->
+	<property>    
+		<name>hive.aux.jars.path</name>     
+		<value>file:///app/noah/hive-1.2.1/lib/hive-hbase-handler-1.2.1.jar,file:///app/noah/hive-1.2.1/lib/guava-14.0.1.jar,file:///app/noah/hive-1.2.1/lib/hbase-common-1.2.1.jar,file:///app/noah/hive-1.2.1/lib/zookeeper-3.4.8.jar</value>    
+	</property>    
+	<property>
+		<name>hbase.zookeeper.quorum</name>
+		<value>ark:2181</value>
+	</property>
+	<!-- hive spark -->
+<!--https://cwiki.apache.org/confluence/display/Hive/Configuration+Properties#ConfigurationProperties-HiveServer2WebUI-->
+</configuration>
+
+

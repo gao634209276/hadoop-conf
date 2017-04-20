@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+	<property>
+		<name>tez.lib.uris</name>
+		<value>hdfs://hadoop:9000/apps/tez-0.8.4/tez-0.8.4-minimal.tar.gz</value>
+	</property>
+	<property>
+		<name>tez.use.cluster.hadoop-libs</name>
+		<value>true</value>
+	</property>
+	
+	<property>
+		<description>Enable Tez to use the Timeline Server for History Logging</description>
+		<name>tez.history.logging.service.class</name>
+		<value>org.apache.tez.dag.history.logging.ats.ATSHistoryLoggingService</value>
+	</property>
+
+	<property>
+		<!--tomcat 9999 端口-->
+		<name>tez.tez-ui.history-url.base</name>
+		<value>http://hadoop:8008/tez-ui/</value>
+	</property>
+
+	<property>
+		<name>tez.runtime.convert.user-payload.to.history-text</name>
+		<value>true</value>
+	</property>
+
+	<property>
+		<name>tez.task.generate.counters.per.io</name>
+		<value>true</value>
+	</property>
+</configuration>
