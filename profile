@@ -6,7 +6,8 @@ export HIVE_HOME=/app/sinova/hive-0.14.0
 export HBASE_HOME=/app/sinova/hbase-0.98.9
 export SPARK_HOME=/app/sinova/spark-2.0.2
 export ZOOKEEPER_HOME=/app/sinova/zookeeper-3.4.6
-
+export KAFKA_HOME=/app/sinova/kafka
+export STORM_HOME=/app/sinova/apache-storm-0.9.5
 #PATH=$PATH:
 export HBASE_HOME=/app/noah/hbase-1.2.1
 export ZOOKEEPER_HOME=/app/noah/zookeeper-3.4.8
@@ -21,4 +22,4 @@ export ZOOKEEPER_HOME=/app/noah/zookeeper-3.4.8
 # export SPARK_HOME=/opt/modules/spark-2.0.2
 # export STORM_HOME=/opt/modules/storm-1.0.1
 
-PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$HIVE_HOME/bin:$ZOOKEEPER_HOME/bin:$HBASE_HOME/bin:$SPARK_HOME/bin
+PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$HIVE_HOME/bin:$ZOOKEEPER_HOME/bin:$HBASE_HOME/bin:$SPARK_HOME/bin:$KAFKA_HOME/bin:$STORM_HOME/bin

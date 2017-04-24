@@ -41,19 +41,19 @@
 	</property>
     <property>
         <name>yarn.nodemanager.local-dirs</name>
-        <value>/opt/sinova/data/yarn/local</value>
+        <value>/app/data/sinova/yarn/nodemanager</value>
     </property>
     <property>
         <name>yarn.nodemanager.log-dirs</name>
-        <value>/opt/sinova/data/yarn/containers</value>
+        <value>/app/data/sinova/yarn/nodemanager-logs</value>
     </property>   
     <property>
-		<name>yarn.log-aggregation-enable</name>
-		<value>true</value>
-        </property>
+	<name>yarn.log-aggregation-enable</name>
+	<value>true</value>
+    </property>
     <property>
         <name>yarn.nodemanager.remote-app-log-dir</name>
-        <value>/opt/sinova/data/yarn/apps</value>
+        <value>/app/data/sinova/yarn/remote-app-log</value>
     </property>
 	<property>
        <name>yarn.application.classpath</name>
@@ -82,7 +82,7 @@
 	</property>
 	<property>
 		<name>yarn.scheduler.maximum-allocation-mb</name>
-		<value>8192</value>
+		<value>4096</value>
 		<discription>单个任务可申请最大内存，默认8192MB</discription>
 	</property>
 	<property>

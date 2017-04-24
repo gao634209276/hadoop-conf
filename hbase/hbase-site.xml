@@ -41,7 +41,7 @@
 	</property>
 	<property>
 		<name>hbase.zookeeper.property.dataDir</name>
-		<value>/opt/sinova/data/zookeeper/</value>
+		<value>/opt/data/sinova/hbase/zookeeper</value>
 	</property>
 	<property>
 		<name>zookeeper.session.timeout</name>
@@ -54,7 +54,7 @@
 	</property>
 	<property>
 		<name>hbase.tmp.dir</name>
-		<value>/opt/sinova/data/hbase</value>
+		<value>/opt/data/sinova/hbase</value>
 	</property>
 	<property>
 		<name>hbase.regionserver.lease.period</name>

@@ -28,12 +28,12 @@
 
 	<property>
 		<name>mapred.system.dir</name>
-		<value>/app/sinova/data/mapred/system</value>
+		<value>/app/data/sinova/mapred/system</value>
 	</property>
 
 	<property>
 		<name>mapred.local.dir</name>
-		<value>/app/sinova/data/mapred/local</value>
+		<value>/app/data/sinova/mapred/local</value>
 	</property>
 	<property>
 		<name>mapreduce.application.classpath</name>

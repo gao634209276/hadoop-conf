@@ -23,7 +23,7 @@
 	</property>
 	<property>
 		<name>hadoop.tmp.dir</name>
-		<value>/app/sinova/data</value>
+		<value>/app/data/sinova</value>
 	</property>
 	<property>
 		<name>fs.trash.interval</name>
