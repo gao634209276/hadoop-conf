@@ -16,29 +16,34 @@
 
 <!-- Put site-specific property overrides in this file. -->
 
-<configuration> 
+<configuration>
 	<property>
-		<name>dfs.replication</name>
-		<value>1</value>
+		<name>fs.defaultFS</name>
+		<value>hdfs://ark:8020</value>
 	</property>
 	<property>
-		 <name>dfs.permissions</name>
-		<value>false</value>
+		<name>hadoop.tmp.dir</name>
+		<value>/app/data/sinova</value>
 	</property>
 	<property>
-		<name>dfs.datanode.data.dir</name>
-		<value>/app/data/sinova/dfs/data</value>
+		<name>fs.trash.interval</name>
+		<value>2880</value>
+	</property>
+
+	<property>
+	<name>io.compression.codecs</name>
+		<value>
+		org.apache.hadoop.io.compress.GzipCodec,
+		org.apache.hadoop.io.compress.DefaultCodec,
+		org.apache.hadoop.io.compress.BZip2Codec,
+		com.hadoop.compression.lzo.LzoCodec,
+		com.hadoop.compression.lzo.LzopCodec
+		</value>
 	</property>
 	<property>
-		<name>dfs.namenode.name.dir</name>
-		<value>/app/data/sinova/data/dfs/name</value>
+		<name>io.compression.codec.lzo.class</name>
+		<value>com.hadoop.compression.lzo.LzoCodec</value>
 	</property>
-	<property>
-		 <name>dfs.datanode.max.xcievers</name>
-		 <value>4096</value>
-	</property>
-	<property>
-		 <name>dfs.webhdfs.enabled</name>
-		 <value>true</value>
-	</property>
+
 </configuration>
+

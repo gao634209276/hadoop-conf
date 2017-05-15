@@ -33,6 +33,7 @@
 # - SPARK_CLASSPATH, default classpath entries to append
 # - SPARK_LOCAL_DIRS, storage directories to use on this node for shuffle and RDD data
 # - MESOS_NATIVE_JAVA_LIBRARY, to point to your libmesos.so if you use Mesos
+export SPARK_LOCAL_DIRS=/app/sinova/spark-2.0.2-bin/tmp
 
 # Options read in YARN client mode
 # - HADOOP_CONF_DIR, to point Spark towards Hadoop configuration files
@@ -40,13 +41,6 @@
 # - SPARK_EXECUTOR_CORES, Number of cores for the executors (Default: 1).
 # - SPARK_EXECUTOR_MEMORY, Memory per Executor (e.g. 1000M, 2G) (Default: 1G)
 # - SPARK_DRIVER_MEMORY, Memory for Driver (e.g. 1000M, 2G) (Default: 1G)
-export HADOOP_HOME=/app/sinova/hadoop-2.5.2
-export HADOOP_CONF_DIR=$HADOOP_HOME/ect/hadoop
-export SPARK_EXECUTOR_INSTANCES=2
-export SPARK_EXECUTOR_CORES=1
-export SPARK_EXECUTOR_MEMORY=2g
-export SPARK_DRIVER_MEMORY=1g
-
 
 # Options for the daemons used in the standalone deploy mode
 # - SPARK_MASTER_HOST, to bind the master to a different IP address or hostname
@@ -63,26 +57,19 @@ export SPARK_DRIVER_MEMORY=1g
 # - SPARK_SHUFFLE_OPTS, to set config properties only for the external shuffle service (e.g. "-Dx=y")
 # - SPARK_DAEMON_JAVA_OPTS, to set config properties for all daemons (e.g. "-Dx=y")
 # - SPARK_PUBLIC_DNS, to set the public dns name of the master or workers
-export SPARK_MASTER_HOST=ark
-export SPARK_MASTER_PORT=7077
-export SPARK_WORKER_CORES=2
-export SPARK_WORKER_MEMORY=2g
-export SPARK_WORKER_INSTANCES=1
-export SPARK_DAEMON_MEMORY=1g
-export SPARK_HISTORY_OPTS="-Dspark.history.fs.logDirectory=hdfs://hadoop:8020/user/spark/eventLog/applicationHistory"
-# export SPARK_DAEMON_JAVA_OPTS=
-
-
 # Generic options for the daemons used in the standalone deploy mode
 # - SPARK_CONF_DIR      Alternate conf dir. (Default: ${SPARK_HOME}/conf)
 # - SPARK_LOG_DIR       Where log files are stored.  (Default: ${SPARK_HOME}/logs)
 # - SPARK_PID_DIR       Where the pid file is stored. (Default: /tmp)
 # - SPARK_IDENT_STRING  A string representing this instance of spark. (Default: $USER)
 # - SPARK_NICENESS      The scheduling priority for daemons. (Default: 0)
+export SCALA_HOME=/app/sinova/scala-2.11.4
+export JAVA_HOME=/app/sinova/jdk1.7
+export SPARK_HOME=/app/sinova/spark-2.0.2-bin
+export SPARK_HISTORY_OPTS="-Dspark.history.fs.logDirectory=hdfs://ark:8020/user/spark/eventLog/applicationHistory"
+export SPARK_LIBRARY_PATH=$SPARK_LIBRARY_PATH:$SPARK_HOME/jars:/usr/local/lzo/bin
+export SPARK_PID_DIR=/app/sinova/spark-2.0.2-bin/pid
 
-export SCALA_HOME=/usr/local/scala-2.11.8
-export JAVA_HOME=/usr/local/java/jdk1.7.0_80
-export SPARK_HOME=/app/sinova/spark-2.0.2
-export SPARK_HISTORY_OPTS="-Dspark.history.fs.logDirectory=hdfs://hadoop:8020/user/spark/eventLog/applicationHistory"
-export SPARK_LIBRARY_PATH=$SPARK_LIBRARY_PATH:$SPARK_HOME/jar:/usr/local/lzo/lib
 
+export HADOOP_HOME=/app/sinova/hadoop-2.5.2
+export HADOOP_CONF_DIR=/app/sinova/hadoop-2.5.2/etc/hadoop

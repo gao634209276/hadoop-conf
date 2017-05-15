@@ -8,9 +8,9 @@ export SPARK_HOME=/app/sinova/spark-2.0.2
 export ZOOKEEPER_HOME=/app/sinova/zookeeper-3.4.6
 export KAFKA_HOME=/app/sinova/kafka
 export STORM_HOME=/app/sinova/apache-storm-0.9.5
-#PATH=$PATH:
+# PATH=$PATH:
 export HBASE_HOME=/app/noah/hbase-1.2.1
-export ZOOKEEPER_HOME=/app/noah/zookeeper-3.4.8
+# export ZOOKEEPER_HOME=/app/noah/zookeeper-3.4.8
 
 
 # export MAHOUT_HOME=/opt/modules/mahout-0.12.0
