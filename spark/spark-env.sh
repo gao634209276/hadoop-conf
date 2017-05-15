@@ -64,7 +64,6 @@ export SPARK_LOCAL_DIRS=/app/sinova/spark-2.0.2-bin/tmp
 # - SPARK_IDENT_STRING  A string representing this instance of spark. (Default: $USER)
 # - SPARK_NICENESS      The scheduling priority for daemons. (Default: 0)
 export SCALA_HOME=/app/sinova/scala-2.11.4
-export JAVA_HOME=/app/sinova/jdk1.7
 export SPARK_HOME=/app/sinova/spark-2.0.2-bin
 export SPARK_HISTORY_OPTS="-Dspark.history.fs.logDirectory=hdfs://ark:8020/user/spark/eventLog/applicationHistory"
 export SPARK_LIBRARY_PATH=$SPARK_LIBRARY_PATH:$SPARK_HOME/jars:/usr/local/lzo/bin

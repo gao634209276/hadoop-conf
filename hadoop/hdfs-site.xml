@@ -31,7 +31,7 @@
 	</property>
 	<property>
 		<name>dfs.namenode.name.dir</name>
-		<value>/app/data/sinova/data/dfs/name</value>
+		<value>/app/data/sinova/dfs/name</value>
 	</property>
 	<property>
 		 <name>dfs.datanode.max.xcievers</name>
