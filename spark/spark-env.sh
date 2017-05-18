@@ -33,7 +33,7 @@
 # - SPARK_CLASSPATH, default classpath entries to append
 # - SPARK_LOCAL_DIRS, storage directories to use on this node for shuffle and RDD data
 # - MESOS_NATIVE_JAVA_LIBRARY, to point to your libmesos.so if you use Mesos
-export SPARK_LOCAL_DIRS=/app/sinova/spark-2.0.2-bin/tmp
+export SPARK_LOCAL_DIRS=/app/sinova/spark-2.0.2/tmp
 
 # Options read in YARN client mode
 # - HADOOP_CONF_DIR, to point Spark towards Hadoop configuration files
@@ -63,8 +63,7 @@ export SPARK_LOCAL_DIRS=/app/sinova/spark-2.0.2-bin/tmp
 # - SPARK_PID_DIR       Where the pid file is stored. (Default: /tmp)
 # - SPARK_IDENT_STRING  A string representing this instance of spark. (Default: $USER)
 # - SPARK_NICENESS      The scheduling priority for daemons. (Default: 0)
-export SCALA_HOME=/app/sinova/scala-2.11.4
-export SPARK_HOME=/app/sinova/spark-2.0.2-bin
+export SPARK_HOME=/app/sinova/spark-2.0.2
 export SPARK_HISTORY_OPTS="-Dspark.history.fs.logDirectory=hdfs://ark:8020/user/spark/eventLog/applicationHistory"
 export SPARK_LIBRARY_PATH=$SPARK_LIBRARY_PATH:$SPARK_HOME/jars:/usr/local/lzo/bin
 export SPARK_PID_DIR=/app/sinova/spark-2.0.2-bin/pid

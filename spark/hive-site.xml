@@ -79,6 +79,11 @@
 		<name>hive.server2.thrift.bind.host</name>
 		<value>ark</value>
 	</property>
+	<property>
+		<name>hive.server2.thrift.http.cookie.auth.enabled</name>
+		<value>false</value>
+	</property>
+
 	<!--
 	<property>
 	   <name>hive.aux.jars.path</name>

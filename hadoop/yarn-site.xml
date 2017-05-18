@@ -106,4 +106,30 @@
 		<name>yarn.resourcemanager.container.liveness-monitor.interval-ms</name>
 		<value>60000</value>
 	</property>
+<!--yarn tez timeline conf set-->
+        <property>
+                <name>yarn.timeline-service.enabled</name>
+                <value>true</value>
+        </property>
+        <property>
+                <name>yarn.timeline-service.hostname</name>
+                <value>localhost</value>
+        </property>
+        <property>
+                <name>yarn.timeline-service.http-cross-origin.enabled</name>
+                <value>true</value>
+        </property>
+        <property>
+                <name>yarn.resourcemanager.system-metrics-publisher.enabled</name>
+                <value>true</value>
+        </property>
+        <property>
+                <name>yarn.timeline-service.webapp.address</name>
+                <value>${yarn.timeline-service.hostname}:8188</value>
+        </property>
+        <property>
+                <name>yarn.timeline-service.webapp.https.address</name>
+                <value>${yarn.timeline-service.hostname}:2191</value>
+        </property>
+
 </configuration>

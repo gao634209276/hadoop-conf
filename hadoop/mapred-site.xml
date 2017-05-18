@@ -50,7 +50,7 @@
 		</value>
 	</property>
 	<property>
-		<name>mapreduce.jobhistory.address </name>
+		<name>mapreduce.jobhistory.address</name>
 		<value>ark:10020</value>
 	</property>
 	<property>
