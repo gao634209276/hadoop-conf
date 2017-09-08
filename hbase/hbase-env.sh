@@ -98,7 +98,7 @@ export HBASE_OPTS="-XX:+UseConcMarkSweepGC"
 # File naming hosts on which backup HMaster will run.  $HBASE_HOME/conf/backup-masters by default.
 # export HBASE_BACKUP_MASTERS=${HBASE_HOME}/conf/backup-masters
 
-# Extra ssh options.  Empty by default.
+# Extra ssh.txt options.  Empty by default.
 # export HBASE_SSH_OPTS="-o ConnectTimeout=1 -o SendEnv=HBASE_CONF_DIR"
 
 # Where log files are stored.  $HBASE_HOME/logs by default.

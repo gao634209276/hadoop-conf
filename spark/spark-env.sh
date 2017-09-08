@@ -63,11 +63,19 @@ export SPARK_LOCAL_DIRS=/app/sinova/spark-2.0.2/tmp
 # - SPARK_PID_DIR       Where the pid file is stored. (Default: /tmp)
 # - SPARK_IDENT_STRING  A string representing this instance of spark. (Default: $USER)
 # - SPARK_NICENESS      The scheduling priority for daemons. (Default: 0)
+
 export SPARK_HOME=/app/sinova/spark-2.0.2
+#export SPARK_DAEMON_MEMORY=4096m
 export SPARK_HISTORY_OPTS="-Dspark.history.fs.logDirectory=hdfs://ark:8020/user/spark/eventLog/applicationHistory"
 export SPARK_LIBRARY_PATH=$SPARK_LIBRARY_PATH:$SPARK_HOME/jars:/usr/local/lzo/bin
-export SPARK_PID_DIR=/app/sinova/spark-2.0.2-bin/pid
+export SPARK_PID_DIR=/app/sinova/spark-2.0.2/pid
 
 
 export HADOOP_HOME=/app/sinova/hadoop-2.5.2
 export HADOOP_CONF_DIR=/app/sinova/hadoop-2.5.2/etc/hadoop
+
+
+#export PYSPARK_DRIVER_PYTHON=ipython2 # As pyspark only works with python2 and not python3
+#export PYSPARK_DRIVER_PYTHON_OPTS="--pylab"
+export PYSPARK_DRIVER_PYTHON=jupyter
+export PYSPARK_DRIVER_PYTHON_OPTS="notebook"

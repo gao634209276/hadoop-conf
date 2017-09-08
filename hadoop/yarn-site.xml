@@ -77,7 +77,7 @@
 	<!--  sets the maximum memory YARN can utilize on the node -->
 	<property>
 		<name>yarn.nodemanager.resource.memory-mb</name>
-		<value>8000</value>
+		<value>6000</value>
 	</property>
 	<!-- want to allow for a maximum of 20 Containers, and thus need (24 GB total RAM) / (12 # of Containers) = 2 GB minimum per container-->
 	<property>

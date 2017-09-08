@@ -1,5 +1,5 @@
 #!/bin/bash
-HADOOP_CONF=/home/sinova/hadoop-2.5.2/etc/hadoop
+HADOOP_CONF=/app/sinova/hadoop-2.5.2/etc/hadoop
 
 while [ $# -gt 0 ] ; do
   nodeArg=$1

@@ -52,6 +52,10 @@
 		<name>hive.exec.dynamic.partition.mode</name>
 		<value>strict</value>
 	</property>
+	<property>
+		<name>hive.server2.thrift.http.cookie.auth.enabled</name>
+		<value>false</value>
+	</property>
 	<!--<property>
 	<property>
 		<name>hive.metastore.uris</name>
